@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+    font-size: 25px;
+    font-family: "Advent Pro", monospace;
+    padding: 1% 20% 1% 20%;
+}
+h1{
+    font-family: "Advent Pro", monospace;
+    text-align: center;
+}
+.medium-image{
+    height: 315px;
+    width: 235px;
+    border-width: 10px;
+    border-color: rgba(0, 255, 255, 0.788);
+    border-style: solid;
+}
+address{
+    font-size: 15px;
+}
+#personal-mail{
+    color: white;
+}
+#user-mail{
+    max-width: 300px;
+    max-height: 45px;
+    font-size: 25px;
+
+}
+#email-button{
+    font-size: 25px;
+    background-color: rgba(0, 255, 255, 0.788);
+    color: black;
+}
