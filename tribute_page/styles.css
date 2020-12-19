@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'JetBrains Mono', sans-serif;
+    line-height: 1.5em;
+}
+#ranking{
+    padding: 4em;
+
+}
+h1{
+    color: hsl(290, 100%, 50%);
+    text-align: center;
+    font-family: 'JetBrains Mono', sans-serif;
+    padding: 1em;
+    margin: 0px;
+    background-color: hsl(290, 80%, 10%);
+}
+#image{
+    position: relative;;
+}
