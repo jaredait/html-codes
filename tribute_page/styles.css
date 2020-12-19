@@ -5,17 +5,34 @@ body{
     line-height: 1.5em;
 }
 #ranking{
-    padding: 4em;
+    padding: 1em 4em 2em 4em;
 
 }
 h1{
-    color: hsl(290, 100%, 50%);
+    color: white;
     text-align: center;
     font-family: 'JetBrains Mono', sans-serif;
     padding: 1em;
     margin: 0px;
-    background-color: hsl(290, 80%, 10%);
+    background: linear-gradient(90deg, hsl(256, 84%, 36%),hsl(290, 38%, 45%));
 }
 #image{
-    position: relative;;
+    margin: auto;
+    display: block;
+}
+#img-caption{
+    text-align: center;
+}
+#contact-info{
+    line-height: 0.5em;
+    padding-left: 5em;
+}
+a{
+    color: white;
+}
+a:hover{
+    color:hsl(290, 72%, 67%);
+}
+hr{
+    color: hsl(290, 38%, 45%);
 }
