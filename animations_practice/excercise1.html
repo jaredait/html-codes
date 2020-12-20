@@ -5,8 +5,14 @@
     </head>
     <body>
         <main>
-        <div id="ball"><p>hover me</p></div>
+        <div class="ball"><p>hover me</p></div>
         <div id="square"><p>follow me</p></div>
+        <div id="loading">
+            <p style="text-align: left;">loading...</p>
+            <div id="ball1" class="loading-ball"></div>
+            <div id="ball2" class="loading-ball"></div>
+            <div id="ball3" class="loading-ball"></div>
+        </div>
         </main>
     </body>
     <style>
@@ -24,7 +30,7 @@
         }
 
         /*      BALL        */
-        #ball{
+        .ball{
             background-color: var(--color0);
             width: 100px;
             height: 100px;
@@ -32,7 +38,7 @@
             position: relative;
             margin: 10%;
         }
-        #ball:hover{
+        .ball:hover{
             animation-name: change-color;
             animation-duration: 4s;
             animation-fill-mode: forwards;
@@ -89,6 +95,96 @@
             }
         }
 
+        /*      LOADING        */
+        #loading{
+            margin: 50px 50px 50px 100px;
+        }
+        .loading-ball{
+            background-color: var(--color0);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px 10px 10px 10px;
+        }
+        #ball1{
+            background-color: var(--color1);
+            position: relative;
+            left: 0px;
+            animation-name: turn-around1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        #ball2{
+            background-color: var(--color2);
+            position: relative;
+            left: 90px;
+            animation-name: turn-around2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        #ball3{
+            background-color: var(--color3);
+            position: relative;
+            left: 0px;
+            animation-name: turn-around3;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes turn-around1{
+            0%{
+                left: 0px;
+                top: 0px;
+            }
+            33%{
+                left: 90px;
+                top: 60px;
+            }
+            66%{
+                left: 0px;
+                top: 120px;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+            }
+        }
+        @keyframes turn-around2{
+            0%{
+                left: 90px;
+                top: 0px;
+            }
+            33%{
+                left: 0px;
+                top: 60px;
+            }
+            66%{
+                left: 0px;
+                top: -60px;
+            }
+            100%{
+                left: 90px;
+                top: 0px;
+            }
+        }
+        @keyframes turn-around3{
+            0%{
+                left: 0px;
+                top: 0px;
+            }
+            33%{
+                left: 0px;
+                top: -120px;
+            }
+            66%{
+                left: 90px;
+                top: -60px;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+            }
+        }
 
         
     </style>
