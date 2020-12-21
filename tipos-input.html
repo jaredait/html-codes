@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prueba input</title>
+	</head>
+	<body style="background-color: #aeaeae;">
+		<form action="inserte aqui el link del servidor">
+		<!--prueba checkbox-->
+		<p>Opciones en checkbox</p>
+		<input type="checkbox" name="opcion" value="a">A
+		<input type="checkbox" name="opcion" value="b">B
+		<input type="checkbox" name="opcion" value="c">C
+		<input type="checkbox" name="opcion" value="d">D
+		<hr />
+		
+		<!--prueba checkbox con label (puedes presionar en las letras de la opcion)-->
+		<p>Opciones en checkbox con label (puedes presionar en las letras de la opcion)</p>
+		<input id="a" type="checkbox" name="opcion" value="a"><label for="a">A</label>
+		<input id="b" type="checkbox" name="opcion" value="a"><label for="b">B</label>
+		<input id="c" type="checkbox" name="opcion" value="a"><label for="c">C</label>
+		<input id="d" type="checkbox" name="opcion" value="a"><label for="d">D</label>
+		
+		<hr />
+		
+		<!--prueba radio-->
+		<p>Opciones en radio</p>
+		<input type="radio" name="opcion2" value="a" checked="checked">A
+		<input type="radio" name="opcion2" value="b">B
+		<input type="radio" name="opcion2" value="c">C
+		<input type="radio" name="opcion2" value="d">D
+		<hr />
+		
+		<!--prueba radio con label-->
+		<p>Opciones en radio con label</p>
+		<input id="a1" type="radio" name="opcion3" value="a" checked="checked"><label for="a1">A</label>
+		<input id="b1" type="radio" name="opcion3" value="b"><label for="b1">B</label>
+		<input id="c1" type="radio" name="opcion3" value="c"><label for="c1">C</label>
+		<input id="d1" type="radio" name="opcion3" value="d"><label for="d1">D</label>
+		<hr />
+		
+		<!--prueba user/password-->
+		<fieldset>
+			<legend>User Data</legend>
+			<p>
+				<label for="usuario">Usuario:</label>
+				<input type="text" name="usuario" placeholder="username" required="required">
+			</p>
+			<p>
+				<label for="password">Password:</label>
+				<input type="password" name="contrasena" placeholder="password" required>
+			</p>
+			<p>
+				<label for="birth">Birthday:</label>
+				<input id="date" type="date" name="birth" required>
+			</p>
+			<input type="submit" value="enviar">
+
+		</fieldset>
+		
+		<hr />
+		
+		<!--prueba drop-down list-->
+		<select name="years">
+			<option value="1995">1995</option>
+			<option value="1996">1996</option>
+			<option value="1997">1997</option>
+			<option value="1998">1998</option>
+		</select>
+		<hr />
+		
+		<!--prueba textarea-->
+		<p>Prueba de textarea</p>
+		<textarea name="comentarios" rows="3" cols="50">
+			Ingresa tus comentarios
+		</textarea>
+		<hr />
+		
+		<!--prueba multiple choice list-->
+		<p>Escoge el color del tema</p>
+		<form action="www.servidor.com" method="post">
+			<select name="colores" size="4" multiple="multiple">
+				<option value="rojo">rojo</option>
+				<option value="verde">verde</option>
+				<option value="azul">azul</option>
+				<option value="violeta">violeta</option>
+				<option value="anaranjado">anaranjado</option>
+			</select>
+		</form>
+		<hr />
+		
+		<!--prueba input type file-->
+		<form action="www.elserver.ec" method="post">
+		<p>Upload file</p>
+			<input type="file" value="archivo"><br />
+			<input type="submit" value="enviar">
+		</form>
+		<hr />
+		
+		<!--prueba submit-->
+		<input type="search" name="search" placeholder="search pato">
+		<input type="submit" value="go pato!">
+		<hr />
+		
+		<!--prueba button-->
+		<button>
+			<img src="images/star.png" alt="star icon" width="12" height="12">EnViAr</img>
+		</button>
+
+
+		
+		
+		
+	</body>
+</html>
