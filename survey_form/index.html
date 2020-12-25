@@ -2,29 +2,33 @@
 <html>
     <head>
         <link href="style.css" type="text/css" rel="stylesheet"/>
-        <title>Wanna date me?</title>
+        <title>Date survey</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&family=Pacifico&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <main>
             <header>
-                <h1 id="title">Wanna date me?</h1>
-                <p id="description">Are we compatible? Shall I slide into your DMs? Fill this survey to find it out!</p>
+                <h1 id="title">Wanna go on a date?</h1>
+                <p id="description"><em>Are we compatible? Shall I slide into your DMs? Fill this survey to find it out!</em></p>
             </header>
             <body>
                 <form id="survey-form" action="#">
-                    <fieldset id="personal-info">
+                    <fieldset id="personal-info" class="fieldsets">
                         <legend>Personal information</legend>
-                        <label for="name">Name: </label>
-                        <input type="text" id="name" placeholder=" Name" name="name" required><br>
-                        <label for="number">Age: </label>
-                        <input type="number" id="number" name="age" placeholder=" Age" min="18" max="25"><br>
-                        <label for="email">Email: </label>
-                        <input type="email" id="email" name="email" placeholder=" Email">
+                        <label for="name" id="name-label">Name:</label><br>
+                        <input type="text" id="name" class="boxes" name="name" placeholder="Type your name" name="name" required><br>
+                        <label for="number" id="number-label">Age:</label><br>
+                        <input type="number" id="number" class="boxes" name="age" placeholder="Type your age" min="18" max="25"><br>
+                        <label for="email" id="email-label">Email:</label><br>
+                        <input type="email" id="email" class="boxes" name="email" placeholder="Type your email" required>
+                        <label for="username" id="username-label">Instagram:</label><br>
+                        <input type="text" id="username" class="boxes" name="ig-username" placeholder="Type your instagram username">
                     </fieldset>
                     <fieldset id="interests">
-                        <legend>Serious questions</legend>
+                        <legend>Just some defining questions</legend>
                         <p>When Spongebob and Patrick are inside the box, Spongebob asks him to cut off his legs. Patrick replied he couldn't because:</p>
-                        <select id="dropdown" name="cartoon-trivia">
+                        <select id="dropdown" class="boxes" name="cartoon-trivia">
                             <option value="saw">He didn't have a saw</option>
                             <option value="arms">He had already cut off his hands</option>
                             <option value="snowman">He was trying to make a snowman</option>
@@ -44,8 +48,9 @@
                         <input id="check5" type="checkbox" name="weapon" value="bow"><label for="check5">Bow</label><br>
 
                         <p>What is your fav food and why burgers?</p>
-                        <textarea name="food" placeholder="I know, they're the best!"></textarea>
+                        <textarea id="food" name="food" placeholder="I know, they're the best!"></textarea>
                     </fieldset>
+                    <input type="submit" class="submit-button" id="submit" value="Submit">
                 </form>
             </body>
         </main>

@@ -36,3 +36,7 @@ a:hover{
 hr{
     color: hsl(290, 38%, 45%);
 }
+.responsive-image{
+    max-width: 100%;
+    height: auto;
+}
