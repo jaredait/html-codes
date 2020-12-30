@@ -1,0 +1,89 @@
+:root{
+    --color1: hsla(221, 63%, 35%, 0.932);
+    --color2: hsla(221, 62%, 46%, 0.932);
+}
+body{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    background-color: hsl(252, 27%, 23%);;  
+    display: grid;
+    justify-content: center;
+}
+fieldset, input, select, textarea{
+    border-radius: 10px;
+    border-width: 5px;
+    margin-bottom: 1rem;
+}
+textarea{
+    width: 96%;
+    height: auto;
+    font-size: 1.6rem;
+    padding: 1rem;
+
+}
+
+.main-container{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #fff;
+    background-color: var(--color2);
+    display: grid;
+    grid-template-rows: 10rem auto;
+    grid-template-areas: "heading" "survey";
+    grid-gap: 2rem;
+    max-width: 1400px;
+}
+.heading-container{
+    display: block;
+    align-self: center;
+    background-color: var(--color1);
+    grid-area: heading;
+    justify-self: center;
+}
+#main-doc header{
+    width: 100%;
+    text-align: center;
+}
+.survey-container{
+    grid-area: survey;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-areas: "personal" "defining";
+    grid-gap: 2rem;
+    padding: 3rem;
+}
+.personal-container{
+    grid-area: personal;
+    padding: 1rem 2rem 1rem 2rem;
+}
+#personal-info input{
+    width: 96%;
+    height: 2rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+.defining-container{
+    grid-area: defining;
+    padding: 1rem 2rem 1rem 2rem;
+}
+#interests select{
+    width: 96%;
+    height: auto;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.submit-button{
+    border-radius: 10px;
+    width: 8rem;
+    height: auto;
+    font-size: 1.6rem;
+    background-color: var(--color1);
+    color: #fff;
+    justify-self: center;
+}
+.submit-button:hover{
+    background-color: var(--color2);
+}

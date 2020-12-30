@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <title>Date survey</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&family=Pacifico&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <main id="main-doc" class="main-container">
+            <header class="heading-container">
+                <h1 id="title">Wanna go on a date?</h1>
+                <p id="description"><em>Are we compatible? Shall I slide into your DMs? Fill this survey to find it out!</em></p>
+            </header>
+            <div>
+                <form id="survey-form" action="#" class="survey-container">
+                    <fieldset id="personal-info" class="personal-container">
+                        <legend>Personal information</legend>
+                        <label for="name" id="name-label">Name:</label><br>
+                        <input type="text" id="name" class="boxes" name="name" placeholder="Type your name" required><br>
+                        <label for="number" id="number-label">Age:</label><br>
+                        <input type="number" id="number" class="boxes" name="age" placeholder="Type your age" min="18" max="25"><br>
+                        <label for="email" id="email-label">Email:</label><br>
+                        <input type="email" id="email" class="boxes" name="email" placeholder="Type your email" required><br>
+                        <label for="username" id="username-label">Instagram:</label><br>
+                        <input type="text" id="username" class="boxes" name="ig-username" placeholder="Type your instagram username">
+                    </fieldset>
+                    <fieldset id="interests" class="defining-container">
+                        <legend>Just some defining questions</legend>
+                        <p>When Spongebob and Patrick are inside the box, Spongebob asks him to cut off his legs. Patrick replied he couldn't because:</p>
+                        <select id="dropdown" class="boxes" name="cartoon-trivia">
+                            <option value="saw">He didn't have a saw</option>
+                            <option value="arms">He had already cut off his hands</option>
+                            <option value="snowman">He was trying to make a snowman</option>
+                        </select>
+                        <p>Choose your superpower:</p>
+                        <input id="radio1" type="radio" name="superpower" value="strength"><label for="radio1">Strength</label><br>
+                        <input id="radio2" type="radio" name="superpower" value="invisibility"><label for="radio2">Invisivility</label><br>
+                        <input id="radio3" type="radio" name="superpower" value="teletransportation"><label for="radio3">Teletransportation</label><br>
+                        <input id="radio4" type="radio" name="superpower" value="portals"><label for="radio4">Create portals</label><br>
+                        <input id="radio5" type="radio" name="superpower" value="telekinesis"><label for="radio5">Telekinesis</label><br>
+
+                        <p>Choose your weapon:</p>
+                        <input id="check1" type="checkbox" name="weapon" value="gun"><label for="check1">Gun</label><br>
+                        <input id="check2" type="checkbox" name="weapon" value="machinegun"><label for="check2">Machinegun</label><br>
+                        <input id="check3" type="checkbox" name="weapon" value="sword"><label for="check3">Sword</label><br>
+                        <input id="check4" type="checkbox" name="weapon" value="fists"><label for="check4">Fists</label><br>
+                        <input id="check5" type="checkbox" name="weapon" value="bow"><label for="check5">Bow</label><br>
+
+                        <p>What is your fav food and why burgers?</p>
+                        <textarea id="food" name="food" placeholder="I know, they're the best!"></textarea>
+                    </fieldset>
+                    <input type="submit" class="submit-button" id="submit" value="Submit">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
