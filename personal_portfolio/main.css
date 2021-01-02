@@ -1,0 +1,46 @@
+:root{
+    --color1: hsl(0, 0%, 31%);
+    --color2: hsl(0, 0%, 41%);
+    --color3: hsl(0, 0%, 91%);
+}
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 62.5%;
+    background-color:  var(--color2);
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    color: purple;
+}
+/* Welcome section */
+.welcome{
+    width: 100%;
+    height: 100vh;
+    color: var(--color3);
+    display: relative;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    grid-area: navigation-bar;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--color1);
+    font-size: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3rem 0 3rem;
+}
+#navigation-bar a{
+    margin-right: 3rem;
+}
