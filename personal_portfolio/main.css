@@ -64,4 +64,5 @@ a:hover{
 }
 #welcome-section h1, h2{
     justify-content: center;
+    margin-bottom: 0;
 }
