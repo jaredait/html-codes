@@ -1,13 +1,13 @@
 :root{
-    --color1: hsl(340, 7%, 17%);
-    --color2: hsl(58, 85%, 55%);
-    --color3: hsl(240, 14%, 97%);
-    --color4: hsl(354, 100%, 71%);
+    --main-black: hsl(340, 7%, 17%);
+    --main-yellow: hsl(58, 85%, 55%);
+    --main-white: hsl(240, 14%, 97%);
+    --main-red: hsl(354, 100%, 71%);
 }
 body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 62.5%;
-    background-color:  var(--color1);
+    background-color:  var(--main-black);
 }
 h1{
     font-size: 2.5rem;
@@ -16,16 +16,18 @@ h2{
     font-size: 2rem;
 }
 a{
-    color: var(--color3);
+    color: var(--main-white);
+    text-decoration: none;
 }
 a:hover{
-    color: var(--color4);
+    color: var(--main-red);
+    transform: scale(1.025);
 }
 /* Welcome section */
 .welcome{
     width: 100%;
     height: 100vh;
-    color: var(--color3);
+    color: var(--main-white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +40,7 @@ a:hover{
     left: 0px;
     width: 100%;
     height: 40px;
-    background-color: var(--color2);
+    background-color: var(--main-yellow);
     font-size: 1rem;
     justify-content: flex-start;
     align-items: center;
@@ -46,23 +48,59 @@ a:hover{
 }
 #navigation-bar a{
     margin-right: 3rem;
-    color: var(--color1);
+    color: var(--main-black);
     padding: 3px;
     text-decoration: none;
     border: solid;
     border-width: 2px;
     padding: 5px;
     border-radius: 5px;
-    border-color: var(--color2);
+    border-color: var(--main-yellow);
 }
 #navigation-bar a:hover{
     border: solid;
     border-width: 2px;
     padding: 5px;
     border-radius: 5px;
-    border-color: var(--color1);
+    border-color: var(--main-black);
 }
 #welcome-section h1, h2{
     justify-content: center;
     margin-bottom: 0;
+}
+/* Projects section */
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-white);
+
+}
+#projects figcaption{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--main-black);
+}
+.projects-container{
+    width: 90vw;
+    height: auto;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2rem;
+}
+.page-screenshot{
+    max-width: 100%;
+    height: auto;
+}
+.project-tile{
+    background-color: var(--main-red)
+}
+#projects figure{
+    margin: 0;
+    padding: 0;
 }
