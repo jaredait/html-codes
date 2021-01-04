@@ -15,14 +15,7 @@ h1{
 h2{
     font-size: 2rem;
 }
-a{
-    color: var(--main-white);
-    text-decoration: none;
-}
-a:hover{
-    color: var(--main-red);
-    transform: scale(1.025);
-}
+
 /* Welcome section */
 .welcome{
     width: 100%;
@@ -46,7 +39,7 @@ a:hover{
     align-items: center;
     padding: 0 3rem 0 3rem;
 }
-#navigation-bar a{
+#navbar a{
     margin-right: 3rem;
     color: var(--main-black);
     padding: 3px;
@@ -57,7 +50,7 @@ a:hover{
     border-radius: 5px;
     border-color: var(--main-yellow);
 }
-#navigation-bar a:hover{
+#navbar a:hover{
     border: solid;
     border-width: 2px;
     padding: 5px;
@@ -79,11 +72,21 @@ a:hover{
     background-color: var(--main-white);
 
 }
+#projects a{
+    color: var(--main-white);
+    text-decoration: none;
+}
+#projects a:hover{
+    transform: scale(1.025);
+    box-shadow: 0 0 10px 3px hsl(0, 0%, 67%);
+}
+
+
 #projects figcaption{
     padding: 1rem;
     font-size: 1.2rem;
     text-align: center;
-    color: var(--main-black);
+
 }
 .projects-container{
     width: 90vw;
@@ -91,16 +94,16 @@ a:hover{
     min-width: 400px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 4rem;
 }
 .page-screenshot{
     max-width: 100%;
     height: auto;
 }
 .project-tile{
-    background-color: var(--main-red)
+    background-color: var(--main-black);
 }
 #projects figure{
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
