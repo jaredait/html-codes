@@ -7,12 +7,14 @@
 body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 62.5%;
-    background-color:  var(--main-black);
+    background-color:  var(--main-white);
 }
 h1{
+    text-align: center;
     font-size: 2.5rem;
 }
 h2{
+    text-align: center;
     font-size: 2rem;
 }
 
@@ -25,6 +27,9 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;;
+    background-color:  var(--main-black);
+    margin: 0;
+
 }
 .navbar{
     position: fixed;
@@ -81,7 +86,6 @@ h2{
     box-shadow: 0 0 10px 3px hsl(0, 0%, 67%);
 }
 
-
 #projects figcaption{
     padding: 1rem;
     font-size: 1.2rem;
@@ -93,8 +97,9 @@ h2{
     height: auto;
     min-width: 400px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 4rem;
+    padding-bottom: 4rem;
 }
 .page-screenshot{
     max-width: 100%;
@@ -107,3 +112,107 @@ h2{
     margin: 0;
     padding: 0;    
 }
+/* Contact */
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25vh, 10vw, 25vh, 10vw;  
+}
+#contact h1, h2{
+    justify-content: center;
+    margin-bottom: 0;
+}
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    margin: 2rem;
+}
+#social-med p{
+    margin-bottom: 0;
+}
+#social-med a{
+    font-size: 1.5rem;
+    color: var(--main-white);
+    text-decoration: none;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+#social-med a:hover{
+    transform: scale(1.025);
+    box-shadow: 0 0 10px 3px hsl(0, 0%, 9%);
+}
+.social-icon{
+    max-width: 64px;
+    height: auto;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--main-white);
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 2rem 0 2rem 0;
+}
+footer a{
+    color: var(--main-black);
+    text-decoration: none;
+}
+footer a:hover{
+    color: var(--main-red);
+}
+/* Media Queries */
+@media (max-width: 800px)
+{
+    #social-med a{
+        font-size: 1.2rem;
+        margin: 1.5rem;
+ 
+    }
+}
+
+@media (max-width: 600px)
+{
+    #navbar a{
+        margin-right: 1rem;
+        color: var(--main-black);
+        padding: 3px;
+        text-decoration: none;
+        border: solid;
+        border-width: 2px;
+        padding: 5px;
+        border-radius: 5px;
+        border-color: var(--main-yellow);
+    }
+    .contact-info{ 
+        height: auto;
+    }
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
+    #social-med a{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
