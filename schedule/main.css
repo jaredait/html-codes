@@ -1,3 +1,6 @@
+:root{
+    --rounded-border: 20px;
+}
 body{
     font-family: Arial, sans-serif;
 }
@@ -10,6 +13,7 @@ body{
     width: 10rem;
     height: 20rem;
     margin: 1rem;
+    border-radius: var(--rounded-border);
 }
 .day-name{
     text-align: center;
@@ -18,5 +22,14 @@ body{
     margin: 0 0 0.5rem 0;
     padding: 0.5rem 0 0.5rem 0;
     background-color: black;
+    border-radius: var(--rounded-border) var(--rounded-border) 0 0;
+}
+.subject{
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: yellow;
 }
 
