@@ -24,20 +24,20 @@ function createSubjects(){
 
 // Create the subjects per day (some of them have different url)
 // Empty
-const empty = Subject('', '');
+const empty = Subject('', '#');
 // Programacion orientada a objetos
-const poo = Subject('Programación Orientada a objetos', 'www');
+const poo = Subject('Programación Orientada a objetos', '#');
 // Redes II
-const redesTuesday_Thursday = Subject('Redes II', 'www');
-const redesWednesday = Subject('Redes II', 'www');
+const redes = Subject('Redes II', 'https://puce.zoom.us/j/88232797247');
 // Base de datos
-const baseDatos = Subject('Base de Datos', 'www');
+const baseDatos = Subject('Base de Datos', 'https://puce.zoom.us/j/89874957717?pwd=MTJHWFJ5czVTREJKbitNOWIydFNuQT09');
 // Ing del software
-const ingSoftware = Subject('Ingeniería del Software', 'www');
+const ingSoftware = Subject('Ingeniería del Software', 'https://puce.zoom.us/j/81824074567');
 // Filosofia de ciancias computacionales
-const filosofia = Subject('Filosofía de Ciencias Computacionales', 'www');
+const filosofia = Subject('Filosofía de Ciencias Computacionales', '#');
 // Infraestructura de TI
-const infraestructura = Subject('Infraestructura de TI', 'www');
+const infraestructuraTuesday = Subject('Infraestructura de TI', 'https://puce.zoom.us/j/85381938231');
+const infraestructuraThursday = Subject('Infraestructura de TI', 'https://puce.zoom.us/j/84008889220');
 
 
 function addSubjectsToSchedule(){
@@ -47,18 +47,18 @@ function addSubjectsToSchedule(){
     week.monday.push(baseDatos);
     // Tuesday
     week.tuesday.push(ingSoftware);
-    week.tuesday.push(infraestructura);
-    week.tuesday.push(redesTuesday_Thursday);
+    week.tuesday.push(infraestructuraTuesday);
+    week.tuesday.push(redes);
     week.tuesday.push(filosofia);
     // Wednesday
-    week.wednesday.push(redesWednesday);
+    week.wednesday.push(redes);
     week.wednesday.push(poo);
     week.wednesday.push(baseDatos);
     week.wednesday.push(filosofia);
     // Thursday
     week.thursday.push(ingSoftware);
-    week.thursday.push(infraestructura);
-    week.thursday.push(redesTuesday_Thursday);
+    week.thursday.push(infraestructuraThursday);
+    week.thursday.push(redes);
     //Friday
     week.friday.push(ingSoftware);
     week.friday.push(poo);
@@ -80,15 +80,22 @@ function createCard(subject, day){
     subCard.textContent = subject.subName;
     subCard.dataset.url = subject.subZoomUrl;
     subCard.classList = 'subject';
+    
+    const subLink = document.createElement('a');
+    subLink.appendChild(subCard);
 
-    const hlink = document.createElement('a');
-    hlink.appendChild(subCard);
-    hlink.href = subject.subZoomUrl;
-    hlink.classList = 'subject-link';
+    if(subject.subZoomUrl !== '#'){
+        subLink.href = subject.subZoomUrl;
+        subLink.classList = 'subject-link';
+        subLink.target = '_blank';
+    }
+    else {
+        subCard.classList = 'empty-link';
+    }   
     
     // append the card to the day
     const currentDay = document.querySelector(`#${day}`);
-    currentDay.appendChild(hlink);
+    currentDay.appendChild(subLink);
 }
 
 // Driver code
