@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JS test</title>
-    </head>
-    <body>
-        <main>
-            <script>
-                let admin;
-                let myName = "jared";
-                admin = myName;
-                console.log("hi! " + admin);
-            </script>
-        </main>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>Function library example</title>
+    <style>
+      input {
+        font-size: 2em;
+        margin: 10px 1px 0;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: white;">
+
+  </body>
+  <script>
+    // Object book
+    let book = {
+      title: '',
+      author: '',
+      pages: '',
+      read: false,
+    }
+    // book Constructor
+    function Book(title, author, pages, read){
+      this.title = title;
+      this.author = author;
+      this.pages = pages;
+      this.read = read;
+
+      this.info = function(){
+        let readMessage = this.read ? 'already read' : 'not read yet';
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${readMessage}`;
+      }
+    }
+
+    let theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 300, true);
+    console.log(theHobbit.info());
+
+  </script>
 </html>
